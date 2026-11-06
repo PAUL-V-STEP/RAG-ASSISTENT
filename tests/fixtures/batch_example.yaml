@@ -1,0 +1,149 @@
+# batch_example.yaml — пример входного файла пакетного прогона RAG-AL (ТЗ-RAG-AL, раздел 17)
+#
+# Запуск:
+#   python -m assistant_api.batch --input batch_example.yaml --stage normalize
+#   python -m assistant_api.batch --input batch_example.yaml --stage input_fix   # без LLM
+#   BATCH_STAGE=full BATCH_TRACE=true python -m assistant_api.batch --input batch_example.yaml
+#
+# Каждый элемент items — один диалог (одна или несколько реплик turns).
+# История и DialogState сбрасываются перед каждым элементом.
+# Все поля expect необязательные; проверяются только поля, относящиеся к выполненной стадии (17.3).
+# Поле a — эталонный ответ ассистента для BATCH_HISTORY_MODE=fixed: он пишется в историю вместо сгенерированного.
+# Все значения — только из документа «ТО автолифта АЛ 3У-М6 — версия для RAG V3.txt» (DATA_FILE).
+# Файл комплекта: batch_example.yaml (ТЗ-RAG-AL, раздел 17; копия — tests/fixtures/batch_example.yaml).
+
+schema_version: 1
+items:
+
+  # ---------- Самостоятельные вопросы ----------
+
+  - id: b001
+    tags: [standalone, periodicity, to1]
+    turns:
+      - q: "Как часто проводится ТО-1?"
+        expect:
+          input_fix: {action: none}
+          intent: periodicity
+          maintenance_level: ТО-1
+          qa_id: [qa002, qa003]
+          expected_contains: ["2 месяц", "250 ч"]
+          not_contains: ["ТО-2"]
+
+  - id: b002
+    tags: [standalone, parameter, eo]
+    turns:
+      - q: "Какова трудоемкость ЕО?"
+        expect:
+          intent: parameter_value
+          maintenance_level: ЕО
+          qa_id: [qa005]
+          expected_contains: ["25 мин"]
+
+  - id: b003
+    tags: [standalone, out_of_corpus]
+    turns:
+      - q: "Когда проводится ТО-2?"
+        expect:
+          decision: none            # стоп-правило level_out_of_corpus (13.7)
+          not_contains: ["250 ч"]
+
+  # ---------- Латинская раскладка и регистр ----------
+
+  - id: b010
+    tags: [layout, to1]
+    turns:
+      - q: "Rfr xfcnj ghjdjlbncz NJ-1&"
+        expect:
+          input_fix: {action: auto, kinds: [layout], text: "Как часто проводится ТО-1?"}
+          intent: periodicity
+          maintenance_level: ТО-1
+          qa_id: [qa002, qa003]
+          same_cache_key_as: b001   # ключ кэша совпадает с кириллическим вопросом
+
+  - id: b011
+    tags: [layout, solution]
+    turns:
+      - q: "Crjkmrj Vfujc Eybltv yf 10 k djls&"
+        expect:
+          input_fix: {action: auto, kinds: [layout], text: "Сколько Магос Унидем на 10 л воды?"}
+          qa_id: [qa017]
+          expected_contains: ["50 мл"]
+
+  - id: b012
+    tags: [capslock, to1]
+    turns:
+      - q: "кАК ЧАСТО ПРОВОДИТСЯ то-1?"
+        expect:
+          input_fix: {action: auto, kinds: [capslock], text: "Как часто проводится ТО-1?"}
+
+  - id: b013
+    tags: [layout, whitelist]
+    turns:
+      - q: "Как обслуживается шасси Mercedes ATEGO 1518?"
+        expect:
+          input_fix: {action: none}
+
+  - id: b014
+    tags: [layout, confirm]
+    turns:
+      - q: "Rfr xfcnj ghjdjkbncz NJ-1&"
+        expect:
+          input_fix: {action: confirm, text: "Как часто проволится ТО-1?"}
+          clarification: true       # Q-A, кэш и ретривер не вызываются
+      - q: "Lf"
+        expect:
+          input_fix: {action: auto, text: "Да"}
+          pending_resolved: true    # обработан сохранённый вопрос
+          intent: periodicity
+          maintenance_level: ТО-1
+
+  # ---------- Диалоги с историей ----------
+
+  - id: b020
+    tags: [dialog, ellipsis]
+    turns:
+      - q: "Как часто проводится ТО-1?"
+        a: "ТО-1 проводится через 2 месяца или через 250 ч работы гидросистемы."
+      - q: "А для СО?"
+        expect:
+          depends_on_history: true
+          standalone_contains: ["СО"]   # формулировка вопроса («как часто» / «периодичность») не фиксируется
+          standalone_not_contains: ["250 ч", "2 месяц"]
+          intent: periodicity           # смысл «как часто» проверяется через intent, а не через основу слова
+          maintenance_level: СО
+          qa_id: [qa004]
+
+  - id: b021
+    tags: [dialog, ellipsis, layout]
+    turns:
+      - q: "Какова трудоемкость ТО-1?"
+        a: "Трудоемкость ТО-1 — около 6 ч."
+      - q: "F lkz CJ crjkmrj dhtvtyb&"
+        expect:
+          input_fix: {action: auto, kinds: [layout], text: "А для СО сколько времени?"}
+          depends_on_history: true
+          intent: parameter_value
+          maintenance_level: СО
+          qa_id: [qa008]
+
+  - id: b022
+    tags: [dialog, negation]
+    turns:
+      - q: "Как прогреть рабочую жидкость гидросистемы зимой?"
+        a: "Насос должен поработать вхолостую не менее 15 мин."
+      - q: "Не меньше скольки минут?"
+        expect:
+          depends_on_history: true
+          negation_preserved: true
+          intent: parameter_value
+          standalone_not_contains: ["15"]
+          qa_id: [qa013]
+
+# ---------- Тот же набор в формате txt (без ожиданий) ----------
+# Как часто проводится ТО-1?
+# Какова трудоемкость ЕО?
+#
+# Как часто проводится ТО-1?
+# А для СО?
+#
+# Rfr xfcnj ghjdjlbncz NJ-1&

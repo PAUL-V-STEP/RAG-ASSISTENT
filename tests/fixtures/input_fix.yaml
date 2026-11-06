@@ -1,0 +1,12 @@
+- id: f01
+  raw: "Rfr xfcnj ghjdjlbncz NJ-1&"
+  expect: {action: auto, kinds: [layout], text: "Как часто проводится ТО-1?"}
+- id: f05
+  raw: "кАК ЧАСТО ПРОВОДИТСЯ то-1?"
+  expect: {action: auto, kinds: [capslock], text: "Как часто проводится ТО-1?"}
+- id: f07
+  raw: "Как обслуживается шасси Mercedes ATEGO 1518?"
+  expect: {action: none, kinds: [], text: "Как обслуживается шасси Mercedes ATEGO 1518?"}
+- id: f08
+  raw: "Как сделать reset ошибки?"
+  expect: {action: none, kinds: [], text: "Как сделать reset ошибки?"}

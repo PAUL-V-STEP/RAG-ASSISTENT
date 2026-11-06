@@ -1,0 +1,33 @@
+# Секреты
+.env
+*.pem
+
+# Виртуальное окружение
+venv/
+venv_py311/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Индексы и кэш RAG (пересобираются)
+assistant_api/chroma_db/
+assistant_api/cache__*.db
+*.db
+
+# Логи прогонов
+logs/*.jsonl
+logs/*.log
+
+# ОС и редактор
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

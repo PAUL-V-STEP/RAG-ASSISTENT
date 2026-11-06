@@ -1,0 +1,181 @@
+# Тестовые вопросы для уровня Q-A (ТЗ-RAG-AL, приложение C и раздел 15.7)
+# Формулировки НЕ совпадают с question и paraphrases из qa_base.yaml (проверяется командой qa_tool validate).
+#
+# Типы тестов:
+#   match     — вопрос должен сопоставиться с expected_id (режим direct или hybrid, если не указан expected_mode)
+#   contrast  — пары похожих вопросов с разными ответами; каждый должен получить свой expected_id или none,
+#               но никогда не чужой id из пары
+#   no_match  — ответа в базе Q-A нет; ожидается decision=none (вопрос уходит в RAG)
+#   dialog    — вопрос с историей; требует модуль нормализации (contextualization); при выключенной
+#               нормализации тест помечается skipped
+#
+# Для match / contrast / dialog runner дополнительно проверяет, что выданный ответ содержит все facts записи.
+#
+# accept_ids — записи той же answer_group, ответ которых тоже засчитывается (qa002 ↔ qa003).
+#   В отчёте отдельно показывается точное попадание в expected_id (информативно, без порога).
+# expected_mode — если задан, режим тоже должен совпасть.
+# guard — для no_match: стоп-правило 13.7, которое должно отсечь вопрос (unit_out_of_corpus, level_out_of_corpus);
+#   причина в логе Q-A должна совпасть.
+# stage — A: нужна только канонизация без LLM (ТЗ-RAG-AL, разделы 10.1 и 11); B: нужна contextualization (10.2–10.6).
+#   Тесты stage B при выключенной contextualization получают статус skipped и в метрики этапа A не входят.
+
+schema_version: 2
+
+tests:
+
+# ── match: перефразировки, синонимы глоссария, разговорные формы ────────
+
+- {id: t001, type: match, question: "Сколько всего видов ТО у автолифта и какие?", expected_id: qa001}
+- {id: t002, type: match, question: "Через какое время после предыдущего делают ТО-1?", expected_id: qa002, accept_ids: [qa003]}
+- {id: t003, type: match, question: "Через сколько часов наработки гидравлики положено ТО1?", expected_id: qa003, accept_ids: [qa002]}
+- {id: t004, type: match, question: "Весной и осенью какое обслуживание проводят?", expected_id: qa004}
+- {id: t005, type: match, question: "Сколько минут отводится на ежедневный осмотр автолифта?", expected_id: qa005}
+- {id: t006, type: match, question: "Сколько длится ежесменное обслуживание зимой?", expected_id: qa006}
+- {id: t007, type: match, question: "Сколько по времени занимает техобслуживание № 1 целиком?", expected_id: qa007}
+- {id: t008, type: match, question: "Какая норма времени на весеннее обслуживание автолифта?", expected_id: qa008}
+- {id: t009, type: match, question: "Из каких частей состоит ежедневное обслуживание?", expected_id: qa009}
+- {id: t010, type: match, question: "Какие уровни жидкостей проверить перед выездом на перрон?", expected_id: qa010}
+- {id: t011, type: match, question: "Что проверить, когда завели двигатель, при ежедневном осмотре?", expected_id: qa011}
+- {id: t012, type: match, question: "Как подготовить гидравлику к работе в мороз?", expected_id: qa012}
+- {id: t013, type: match, question: "Сколько времени должна крутиться гидравлика без нагрузки зимой, прежде чем начинать работу?", expected_id: qa013}
+- {id: t014, type: match, question: "Что делать с машиной в конце рабочего дня?", expected_id: qa014}
+- {id: t015, type: match, question: "Сколько раз в неделю нужна санобработка кузова-фургона?", expected_id: qa015}
+- {id: t016, type: match, question: "Какой инвентарь нужен для дезинфекции фургона?", expected_id: qa016}
+- {id: t017, type: match, question: "Сколько миллилитров Унидема на ведро в 10 литров?", expected_id: qa017}
+- {id: t018, type: match, question: "Можно ли мыть фургон холодной водой и какая температура нужна?", expected_id: qa018}
+- {id: t019, type: match, question: "Что мыть сначала — потолок или пол фургона?", expected_id: qa019}
+- {id: t020, type: match, question: "После мойки фургона раствор нужно смывать водой?", expected_id: qa020}
+- {id: t021, type: match, question: "Перечень работ при техобслуживании № 1?", expected_id: qa021}
+- {id: t022, type: match, question: "Сколько часов уходит на промывку фильтра гидравлики в ультразвуковой ванне?", expected_id: qa022}
+- {id: t023, type: match, question: "Сколько времени на шприцевание тавотниц при ТО-1?", expected_id: qa023}
+- {id: t024, type: match, question: "Сколько часов на чистку аккумуляторов от электролита при ТО-1?", expected_id: qa024}
+- {id: t025, type: match, question: "Что входит в осеннее обслуживание автолифта?", expected_id: qa025}
+- {id: t026, type: match, question: "Сколько времени на подтяжку резьбовых соединений при сезонном обслуживании?", expected_id: qa026}
+- {id: t027, type: match, question: "Сколько по времени осмотр подшипников роликов ножничного механизма?", expected_id: qa027}
+- {id: t028, type: match, question: "Норма времени на осмотр роликов выдвижной платформы при СО?", expected_id: qa028}
+- {id: t029, type: match, question: "Сколько часов на восстановление лакокрасочного покрытия при СО?", expected_id: qa029}
+- {id: t030, type: match, question: "Что проверить осенью у отопления и обдува стекла и сколько это займет?", expected_id: qa030}
+- {id: t031, type: match, question: "Какие ежегодные работы предусмотрены для автолифта?", expected_id: qa031}
+- {id: t032, type: match, question: "Как часто снимать пальцы крепления цилиндров пантографа?", expected_id: qa032}
+- {id: t033, type: match, question: "С какой периодичностью проводится ежегодная проверка технического состояния?", expected_id: qa033}
+- {id: t034, type: match, question: "Как взять пробу и проверить гидромасло?", expected_id: qa034}
+- {id: t035, type: match, question: "Какие предельные показатели для гидромасла указаны в документе?", expected_id: qa035}
+- {id: t036, type: match, question: "Выше скольки градусов нельзя нагревать гидравлику?", expected_id: qa036}
+- {id: t037, type: match, question: "Сколько процентов воды допустимо в гидромасле?", expected_id: qa037}
+- {id: t038, type: match, question: "Какой процент загрязнений допустим для рабочей жидкости?", expected_id: qa038}
+- {id: t039, type: match, question: "Какой класс чистоты гидромасла нужен по ГОСТ 17216-71?", expected_id: qa039}
+- {id: t040, type: match, question: "Почему на промокательной бумаге черное пятно от гидрожидкости?", expected_id: qa040}
+- {id: t041, type: match, question: "Масло на смотровом стекле ниже метки — можно ли работать?", expected_id: qa041}
+- {id: t042, type: match, question: "Как поменять масло в гидравлике автолифта?", expected_id: qa042}
+- {id: t043, type: match, question: "Можно ли подтягивать соединения гидросистемы под давлением?", expected_id: qa043}
+- {id: t044, type: match, question: "Можно ли пропустить смазочные работы при ТО, если нет времени?", expected_id: qa044}
+- {id: t045, type: match, question: "Может ли водитель без зачета по эксплуатации обслуживать автолифт?", expected_id: qa045}
+- {id: t046, type: match, question: "В каком журнале отмечают проведенное ТО?", expected_id: qa046}
+- {id: t047, type: match, question: "Зачем вообще нужна профилактика автолифта?", expected_id: qa047}
+- {id: t048, type: match, question: "Где найти порядок обслуживания Mercedes Atego?", expected_id: qa048}
+- {id: t049, type: match, question: "Можно ли работать на автолифте при ветре 25 м/с?", expected_id: qa049}
+- {id: t050, type: match, question: "Можно ли выезжать на автолифте на городские дороги?", expected_id: qa050}
+
+# ── contrast: похожие вопросы с разными ответами ───────────────────────
+
+- {id: c01a, type: contrast, pair: c01, question: "Как часто делают ТО-1?", expected_id: qa002, accept_ids: [qa003], must_not: [qa004]}
+- {id: c01b, type: contrast, pair: c01, question: "Как часто делают СО?", expected_id: qa004, must_not: [qa002]}
+- {id: c02a, type: contrast, pair: c02, question: "Сколько длится ЕО?", expected_id: qa005, must_not: [qa006]}
+- {id: c02b, type: contrast, pair: c02, question: "Сколько длится ЕО зимой?", expected_id: qa006, must_not: [qa005]}
+- {id: c03a, type: contrast, pair: c03, question: "Трудоемкость ТО-1 в часах?", expected_id: qa007, must_not: [qa008]}
+- {id: c03b, type: contrast, pair: c03, question: "Трудоемкость СО в часах?", expected_id: qa008, must_not: [qa007]}
+- {id: c04a, type: contrast, pair: c04, question: "Сколько воды допускается в гидрожидкости в процентах?", expected_id: qa037, must_not: [qa038]}
+- {id: c04b, type: contrast, pair: c04, question: "Сколько загрязнений допускается в гидрожидкости в процентах?", expected_id: qa038, must_not: [qa037]}
+- {id: c05a, type: contrast, pair: c05, question: "Что делать с автолифтом перед выездом?", expected_id: qa010, must_not: [qa014]}
+- {id: c05b, type: contrast, pair: c05, question: "Что делать с автолифтом после окончания работы?", expected_id: qa014, must_not: [qa010]}
+- {id: c06a, type: contrast, pair: c06, question: "Какие работы выполняют при ТО-1?", expected_id: qa021, must_not: [qa025]}
+- {id: c06b, type: contrast, pair: c06, question: "Какие работы выполняют при СО?", expected_id: qa025, must_not: [qa021]}
+- {id: c07a, type: contrast, pair: c07, question: "Что нужно делать раз в год?", expected_id: qa031, must_not: [qa032]}
+- {id: c07b, type: contrast, pair: c07, question: "Что нужно делать раз в три года?", expected_id: qa032, must_not: [qa031]}
+- {id: c08a, type: contrast, pair: c08, question: "Как часто санобработка фургона?", expected_id: qa015, must_not: [qa019]}
+- {id: c08b, type: contrast, pair: c08, question: "В каком порядке санобработка фургона?", expected_id: qa019, must_not: [qa015]}
+- {id: c09a, type: contrast, pair: c09, question: "Сколько моющего средства на 10 л воды?", expected_id: qa017, must_not: [qa018]}
+- {id: c09b, type: contrast, pair: c09, question: "Какой температуры воду брать для мойки фургона?", expected_id: qa018, must_not: [qa017]}
+- {id: c10a, type: contrast, pair: c10, question: "Сколько времени осмотр роликов стрелы пантографа?", expected_id: qa027, must_not: [qa028]}
+- {id: c10b, type: contrast, pair: c10, question: "Сколько времени осмотр роликов выдвижной площадки?", expected_id: qa028, must_not: [qa027]}
+- {id: c11a, type: contrast, pair: c11, question: "Какая максимальная температура гидрожидкости?", expected_id: qa036, must_not: [qa049]}
+- {id: c11b, type: contrast, pair: c11, question: "Какая максимальная температура воздуха для работы автолифта?", expected_id: qa049, must_not: [qa036]}
+- {id: c12a, type: contrast, pair: c12, question: "Сколько часов промывка фильтроэлемента при ТО-1?", expected_id: qa022, must_not: [qa024]}
+- {id: c12b, type: contrast, pair: c12, question: "Сколько часов обслуживание аккумуляторов при ТО-1?", expected_id: qa024, must_not: [qa022]}
+# c13: период ТО-1 (qa002/qa003, одна answer_group) против трудоемкости ТО-1 (qa007) — близкие по эмбеддингам,
+#      различаются intent; проверяет, что группа не «съедает» соседние записи по ТО-1
+- {id: c13a, type: contrast, pair: c13, question: "Сколько часов должна отработать гидравлика до ТО-1?", expected_id: qa003, accept_ids: [qa002], must_not: [qa007]}
+- {id: c13b, type: contrast, pair: c13, question: "Сколько часов уходит на выполнение ТО-1?", expected_id: qa007, must_not: [qa002, qa003]}
+
+# ── no_match: ответа в базе Q-A нет, вопрос уходит в RAG ───────────────
+# Многие вопросы специально похожи на записи базы.
+
+- {id: n01, type: no_match, question: "Какую марку гидравлического масла заливать в бак и сколько литров нужно для полной замены?", near: [qa042, qa035]}
+- {id: n02, type: no_match, question: "Какое рабочее давление в гидросистеме автолифта в МПа?", near: [qa043], guard: unit_out_of_corpus}
+- {id: n03, type: no_match, question: "Какой момент затяжки резьбовых соединений рамы?", near: [qa026]}
+- {id: n04, type: no_match, question: "Когда проводится ТО-2 автолифта?", near: [qa002, qa004], guard: level_out_of_corpus}
+- {id: n05, type: no_match, question: "Какой объем бака гидросистемы?", near: [qa041]}
+- {id: n06, type: no_match, question: "Какая грузоподъемность автолифта АЛ 3У-М6?", near: [qa050]}
+- {id: n07, type: no_match, question: "На какую высоту поднимается кузов автолифта?", near: [qa011]}
+- {id: n08, type: no_match, question: "Какое давление должно быть в шинах автолифта?", near: [qa010]}
+- {id: n09, type: no_match, question: "Как часто менять масло в двигателе шасси?", near: [qa048, qa010]}
+- {id: n10, type: no_match, question: "Как устранить течь гидроцилиндра?", near: [qa032]}
+- {id: n11, type: no_match, question: "Каким средством обрабатывать кабину водителя?", near: [qa016]}
+- {id: n12, type: no_match, question: "Какой каталожный номер у фильтроэлемента гидросистемы?", near: [qa022]}
+
+# ── dialog: вопросы с историей (нужна нормализация) ────────────────────
+
+- id: dg1
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Как часто проводится ТО-1?"}
+    - {role: assistant, content: "ТО-1 проводится через 2 месяца работы или через 250 ч работы гидросистемы (пп. 4.3.1, 4.3.3)."}
+  question: "А трудоемкость у него какая?"
+  expected_id: qa007
+
+- id: dg2
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Каким нормам должна соответствовать гидрожидкость?"}
+    - {role: assistant, content: "Рабочая температура — не выше 80 °C, содержание воды — не более 0,5 %, масса загрязнений — не более 0,0032 %."}
+  question: "А как её проверить на загрязнение?"
+  expected_id: qa040
+
+- id: dg3
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Как часто проводится санитарная обработка фургона?"}
+    - {role: assistant, content: "Рекомендуется два-три раза в неделю, при сильном загрязнении — ежедневно (п. 4.3.2)."}
+  question: "А в каком порядке её делать?"
+  expected_id: qa019
+
+- id: dg4
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Какие виды ТО предусмотрены?"}
+    - {role: assistant, content: "ЕО, ТО-1 и СО (п. 4.3.1)."}
+  question: "А какая у него трудоемкость?"
+  expected_id: none
+  expected_clarification: true   # неоднозначно: уровень Q-A не вызывается
+
+- id: dg5
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Как прогреть рабочую жидкость гидросистемы при отрицательной температуре?"}
+    - {role: assistant, content: "После включения коробки отбора мощности дать насосу проработать вхолостую, без нагрузки (п. 4.3.2)."}
+  question: "Не меньше скольки минут?"
+  expected_id: qa013
+
+- id: dg6
+  type: dialog
+  stage: B
+  history:
+    - {role: user, content: "Какова трудоемкость ЕО?"}
+    - {role: assistant, content: "Трудоемкость ЕО — 25 мин (п. 4.3.2)."}
+  question: "А зимой?"
+  expected_id: qa006

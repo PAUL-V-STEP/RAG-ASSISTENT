@@ -1,0 +1,380 @@
+{
+  "summary": {
+    "dialog": {
+      "n": 6,
+      "ok": 3,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "id": "dg1",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как часто проводится ТО-1?"
+        },
+        {
+          "role": "assistant",
+          "content": "ТО-1 проводится через 2 месяца работы или через 250 ч работы гидросистемы (пп. 4.3.1, 4.3.3)."
+        }
+      ],
+      "question": "А трудоемкость у него какая?",
+      "expected_id": "qa007",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.49207812547683716,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5876803994178772,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4746917486190796,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.6292749047279358,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.6321503520011902,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.49207812547683716,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "dg2",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Каким нормам должна соответствовать гидрожидкость?"
+        },
+        {
+          "role": "assistant",
+          "content": "Рабочая температура — не выше 80 °C, содержание воды — не более 0,5 %, масса загрязнений — не более 0,0032 %."
+        }
+      ],
+      "question": "А как её проверить на загрязнение?",
+      "expected_id": "qa040",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa040",
+      "reason": "within_hybrid",
+      "d1": 0.14806818962097168,
+      "candidates": [
+        {
+          "qa_id": "qa034",
+          "d": 0.33498358726501465,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.4610176682472229,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.48933666944503784,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.38284116983413696,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa039",
+          "d": 0.43444859981536865,
+          "slots_ok": true,
+          "group": "qa039",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "dg3",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как часто проводится санитарная обработка фургона?"
+        },
+        {
+          "role": "assistant",
+          "content": "Рекомендуется два-три раза в неделю, при сильном загрязнении — ежедневно (п. 4.3.2)."
+        }
+      ],
+      "question": "А в каком порядке её делать?",
+      "expected_id": "qa019",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa019",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.24944669008255005,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.42823225259780884,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.2888719439506531,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.5454545454545454
+        }
+      ]
+    },
+    {
+      "id": "dg4",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Какие виды ТО предусмотрены?"
+        },
+        {
+          "role": "assistant",
+          "content": "ЕО, ТО-1 и СО (п. 4.3.1)."
+        }
+      ],
+      "question": "А какая у него трудоемкость?",
+      "expected_id": "none",
+      "expected_clarification": true,
+      "status": "fail",
+      "pass": false,
+      "decision": "hybrid",
+      "got_id": "qa007",
+      "reason": "within_hybrid",
+      "d1": 0.14240843057632446,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.24776893854141235,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.4
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.34977447986602783,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.23076923076923078
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.16961973905563354,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.5
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.16025519371032715,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.625
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.14240843057632446,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "dg5",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как прогреть рабочую жидкость гидросистемы при отрицательной температуре?"
+        },
+        {
+          "role": "assistant",
+          "content": "После включения коробки отбора мощности дать насосу проработать вхолостую, без нагрузки (п. 4.3.2)."
+        }
+      ],
+      "question": "Не меньше скольки минут?",
+      "expected_id": "qa013",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.5862914323806763,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5957384705543518,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.6776818037033081,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.647844672203064,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5862914323806763,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.6717456579208374,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "dg6",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Какова трудоемкость ЕО?"
+        },
+        {
+          "role": "assistant",
+          "content": "Трудоемкость ЕО — 25 мин (п. 4.3.2)."
+        }
+      ],
+      "question": "А зимой?",
+      "expected_id": "qa006",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa006",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.3856077194213867,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa001",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.23274964094161987,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa005",
+          "overlap": 0.6
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa006",
+          "overlap": 1.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.2737905979156494,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.45454545454545453
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.21671688556671143,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.45454545454545453
+        }
+      ]
+    }
+  ]
+}

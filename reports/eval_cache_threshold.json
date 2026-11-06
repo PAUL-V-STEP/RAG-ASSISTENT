@@ -1,0 +1,6 @@
+{
+  "metric": "cosine_similarity",
+  "SEMANTIC_CACHE_MIN_SIMILARITY": 0.88,
+  "SEMANTIC_CACHE_STRICT_MIN_SIMILARITY": 0.97,
+  "note": "значения из текущего assistant_api/cache.py на этапе 0"
+}

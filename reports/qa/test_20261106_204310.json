@@ -1,0 +1,4909 @@
+{
+  "summary": {
+    "match": {
+      "n": 50,
+      "ok": 46,
+      "skipped": 0
+    },
+    "contrast": {
+      "n": 26,
+      "ok": 26,
+      "skipped": 0
+    },
+    "no_match": {
+      "n": 12,
+      "ok": 12,
+      "skipped": 0
+    },
+    "dialog": {
+      "n": 6,
+      "ok": 3,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "id": "t001",
+      "type": "match",
+      "question": "Сколько всего видов ТО у автолифта и какие?",
+      "expected_id": "qa001",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa001",
+      "reason": "intent_mismatch",
+      "d1": 0.011365413665771484,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.011365413665771484,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.75
+        },
+        {
+          "qa_id": "qa002",
+          "d": 0.3105800151824951,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.5027542114257812,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.4345073699951172,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.3194569945335388,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "id": "t002",
+      "type": "match",
+      "question": "Через какое время после предыдущего делают ТО-1?",
+      "expected_id": "qa002",
+      "accept_ids": [
+        "qa003"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa002",
+      "reason": "intent_mismatch",
+      "d1": 0.1413499116897583,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.1413499116897583,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.45454545454545453
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.38335514068603516,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.2758362889289856,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.1960178017616272,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.33896875381469727,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.09090909090909091
+        }
+      ]
+    },
+    {
+      "id": "t003",
+      "type": "match",
+      "question": "Через сколько часов наработки гидравлики положено ТО1?",
+      "expected_id": "qa003",
+      "accept_ids": [
+        "qa002"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa003",
+      "reason": "within_hybrid",
+      "d1": 0.20007765293121338,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.39987558126449585,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.20007765293121338,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.4444444444444444
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.4446974992752075,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.3970910310745239,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.41080617904663086,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.13333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t004",
+      "type": "match",
+      "question": "Весной и осенью какое обслуживание проводят?",
+      "expected_id": "qa004",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa004",
+      "reason": "intent_mismatch",
+      "d1": 0.10927510261535645,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.10927510261535645,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.7142857142857143
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.28467005491256714,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.33884263038635254,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.5153073072433472,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa009",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.4965236186981201,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa014",
+          "overlap": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t005",
+      "type": "match",
+      "question": "Сколько минут отводится на ежедневный осмотр автолифта?",
+      "expected_id": "qa005",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa005",
+      "reason": "within_direct",
+      "d1": 0.04986250400543213,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.39916956424713135,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa002",
+          "d": 0.4270034432411194,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.452057421207428,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.04986250400543213,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.7142857142857143
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.3817939758300781,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t006",
+      "type": "match",
+      "question": "Сколько длится ежесменное обслуживание зимой?",
+      "expected_id": "qa006",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.35283565521240234,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.5401973128318787,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa004",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.26467299461364746,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa005",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.35283565521240234,
+          "slots_ok": true,
+          "group": "qa006",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5315676927566528,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.4226723909378052,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa009",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "t007",
+      "type": "match",
+      "question": "Сколько по времени занимает техобслуживание № 1 целиком?",
+      "expected_id": "qa007",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa007",
+      "reason": "within_hybrid",
+      "d1": 0.1251644492149353,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.4497261643409729,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.49652379751205444,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4641372561454773,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.23076923076923078
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.1251644492149353,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.6666666666666666
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.38068675994873047,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t008",
+      "type": "match",
+      "question": "Какая норма времени на весеннее обслуживание автолифта?",
+      "expected_id": "qa008",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa008",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.42035746574401855,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa002",
+          "d": 0.33544647693634033,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa004",
+          "d": 0.4301488399505615,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.36094141006469727,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.375
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.375
+        }
+      ]
+    },
+    {
+      "id": "t009",
+      "type": "match",
+      "question": "Из каких частей состоит ежедневное обслуживание?",
+      "expected_id": "qa009",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa009",
+      "reason": "intent_mismatch",
+      "d1": 0.09508591890335083,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.6536017060279846,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa004",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.29587697982788086,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.6385464072227478,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.6400922536849976,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.09508591890335083,
+          "slots_ok": true,
+          "group": "qa009",
+          "overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "t010",
+      "type": "match",
+      "question": "Какие уровни жидкостей проверить перед выездом на перрон?",
+      "expected_id": "qa010",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa010",
+      "reason": "intent_mismatch",
+      "d1": 0.20030748844146729,
+      "candidates": [
+        {
+          "qa_id": "qa010",
+          "d": 0.20030748844146729,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.5555555555555556
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.5585063099861145,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa030",
+          "d": 0.5407305955886841,
+          "slots_ok": true,
+          "group": "qa030",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.47219258546829224,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.5535324215888977,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t011",
+      "type": "match",
+      "question": "Что проверить, когда завели двигатель, при ежедневном осмотре?",
+      "expected_id": "qa011",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa011",
+      "reason": "intent_mismatch",
+      "d1": 0.14889156818389893,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5637446641921997,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.545304000377655,
+          "slots_ok": true,
+          "group": "qa009",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.5287647843360901,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.14889156818389893,
+          "slots_ok": true,
+          "group": "qa011",
+          "overlap": 0.4166666666666667
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.5655641555786133,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "t012",
+      "type": "match",
+      "question": "Как подготовить гидравлику к работе в мороз?",
+      "expected_id": "qa012",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa012",
+      "reason": "within_direct",
+      "d1": 0.06342750787734985,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.06342750787734985,
+          "slots_ok": true,
+          "group": "qa012",
+          "overlap": 0.75
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.4112665057182312,
+          "slots_ok": true,
+          "group": "qa013",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa030",
+          "d": 0.5393076539039612,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa030",
+          "overlap": 0.0625
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.5159149169921875,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa034",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.48165351152420044,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa035",
+          "overlap": 0.08333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t013",
+      "type": "match",
+      "question": "Сколько времени должна крутиться гидравлика без нагрузки зимой, прежде чем начинать работу?",
+      "expected_id": "qa013",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa013",
+      "reason": "within_direct",
+      "d1": 0.078835129737854,
+      "candidates": [
+        {
+          "qa_id": "qa003",
+          "d": 0.5019896626472473,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "to1_periodicity",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4979167580604553,
+          "slots_ok": true,
+          "group": "qa006",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5140469074249268,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa008",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.3793897032737732,
+          "slots_ok": true,
+          "group": "qa012",
+          "overlap": 0.05555555555555555
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.078835129737854,
+          "slots_ok": true,
+          "group": "qa013",
+          "overlap": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "t014",
+      "type": "match",
+      "question": "Что делать с машиной в конце рабочего дня?",
+      "expected_id": "qa014",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.5481194853782654,
+      "candidates": [
+        {
+          "qa_id": "qa009",
+          "d": 0.5713363885879517,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa009",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.5807614922523499,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa011",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.48157012462615967,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa012",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.04993438720703125,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa014",
+          "overlap": 0.6666666666666666
+        },
+        {
+          "qa_id": "qa020",
+          "d": 0.5665091276168823,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa020",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t015",
+      "type": "match",
+      "question": "Сколько раз в неделю нужна санобработка кузова-фургона?",
+      "expected_id": "qa015",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa015",
+      "reason": "within_hybrid",
+      "d1": 0.1919342279434204,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.5694604516029358,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.5550341606140137,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa015",
+          "d": 0.1919342279434204,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.75
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.5247103571891785,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.5440885424613953,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t016",
+      "type": "match",
+      "question": "Какой инвентарь нужен для дезинфекции фургона?",
+      "expected_id": "qa016",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa016",
+      "reason": "intent_mismatch",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.4777217507362366,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.7142857142857143
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.3437110185623169,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.4325888156890869,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.3076923076923077
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.42652153968811035,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "id": "t017",
+      "type": "match",
+      "question": "Сколько миллилитров Унидема на ведро в 10 литров?",
+      "expected_id": "qa017",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa017",
+      "reason": "within_direct",
+      "d1": 0.10696268081665039,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.6078841686248779,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.6069942712783813,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.10696268081665039,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.6666666666666666
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.6382278800010681,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.6227259635925293,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t018",
+      "type": "match",
+      "question": "Можно ли мыть фургон холодной водой и какая температура нужна?",
+      "expected_id": "qa018",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa018",
+      "reason": "intent_mismatch",
+      "d1": 0.24434155225753784,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.522354006767273,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa012",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa015",
+          "d": 0.4218994379043579,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.49750304222106934,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.0625
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.24434155225753784,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.4547843337059021,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.13333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t019",
+      "type": "match",
+      "question": "Что мыть сначала — потолок или пол фургона?",
+      "expected_id": "qa019",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa019",
+      "reason": "intent_mismatch",
+      "d1": 0.1934240460395813,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.4666757583618164,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.49025630950927734,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.516251802444458,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.48393714427948,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.1934240460395813,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.45454545454545453
+        }
+      ]
+    },
+    {
+      "id": "t020",
+      "type": "match",
+      "question": "После мойки фургона раствор нужно смывать водой?",
+      "expected_id": "qa020",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa020",
+      "reason": "intent_mismatch",
+      "d1": 0.011679291725158691,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.4555981755256653,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.3740273118019104,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.31197160482406616,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.3084214925765991,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.40637385845184326,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "id": "t021",
+      "type": "match",
+      "question": "Перечень работ при техобслуживании № 1?",
+      "expected_id": "qa021",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa021",
+      "reason": "intent_mismatch",
+      "d1": 0.05078321695327759,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.4110513925552368,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.35219067335128784,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.3950080871582031,
+          "slots_ok": true,
+          "group": "qa009",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.05078321695327759,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.7142857142857143
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.4610675573348999,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.125
+        }
+      ]
+    },
+    {
+      "id": "t022",
+      "type": "match",
+      "question": "Сколько часов уходит на промывку фильтра гидравлики в ультразвуковой ванне?",
+      "expected_id": "qa022",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa022",
+      "reason": "within_hybrid",
+      "d1": 0.15681225061416626,
+      "candidates": [
+        {
+          "qa_id": "qa013",
+          "d": 0.512482762336731,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa015",
+          "d": 0.5512090921401978,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa015",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.5348248481750488,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa016",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.546405553817749,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa017",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.5463888049125671,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa019",
+          "overlap": 0.058823529411764705
+        }
+      ]
+    },
+    {
+      "id": "t023",
+      "type": "match",
+      "question": "Сколько времени на шприцевание тавотниц при ТО-1?",
+      "expected_id": "qa023",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa023",
+      "reason": "within_direct",
+      "d1": 0.10602867603302002,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.4084186553955078,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.4367351531982422,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "to1_periodicity",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.33422863483428955,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.40806764364242554,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.10602867603302002,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "t024",
+      "type": "match",
+      "question": "Сколько часов на чистку аккумуляторов от электролита при ТО-1?",
+      "expected_id": "qa024",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa024",
+      "reason": "within_hybrid",
+      "d1": 0.23907071352005005,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.535424530506134,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.4705216884613037,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "to1_periodicity",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.4724053740501404,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.5215411186218262,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.43831831216812134,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa022",
+          "overlap": 0.1875
+        }
+      ]
+    },
+    {
+      "id": "t025",
+      "type": "match",
+      "question": "Что входит в осеннее обслуживание автолифта?",
+      "expected_id": "qa025",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.2824314832687378,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.31921082735061646,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa002",
+          "d": 0.3741455078125,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.4243161082267761,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.2873023748397827,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.5714285714285714
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.35919737815856934,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "id": "t026",
+      "type": "match",
+      "question": "Сколько времени на подтяжку резьбовых соединений при сезонном обслуживании?",
+      "expected_id": "qa026",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa026",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.41075217723846436,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.3598373532295227,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.37257492542266846,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.5043042302131653,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa013",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.3742636442184448,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.2727272727272727
+        }
+      ]
+    },
+    {
+      "id": "t027",
+      "type": "match",
+      "question": "Сколько по времени осмотр подшипников роликов ножничного механизма?",
+      "expected_id": "qa027",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa027",
+      "reason": "within_hybrid",
+      "d1": 0.12076348066329956,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5683014392852783,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.6344693899154663,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.5992262363433838,
+          "slots_ok": true,
+          "group": "qa011",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.647438645362854,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa022",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.6105575561523438,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.13333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t028",
+      "type": "match",
+      "question": "Норма времени на осмотр роликов выдвижной платформы при СО?",
+      "expected_id": "qa028",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa028",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5393452644348145,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5236831307411194,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.5764837265014648,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa023",
+          "overlap": 0.21428571428571427
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.3691021203994751,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.45454545454545453
+        },
+        {
+          "qa_id": "qa027",
+          "d": 0.4902578592300415,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa027",
+          "overlap": 0.35714285714285715
+        }
+      ]
+    },
+    {
+      "id": "t029",
+      "type": "match",
+      "question": "Сколько часов на восстановление лакокрасочного покрытия при СО?",
+      "expected_id": "qa029",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa029",
+      "reason": "within_hybrid",
+      "d1": 0.24062561988830566,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.541804850101471,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5046752095222473,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.4966665506362915,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa023",
+          "overlap": 0.23076923076923078
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.5567453503608704,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.5464805960655212,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.25
+        }
+      ]
+    },
+    {
+      "id": "t030",
+      "type": "match",
+      "question": "Что проверить осенью у отопления и обдува стекла и сколько это займет?",
+      "expected_id": "qa030",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa030",
+      "reason": "within_direct",
+      "d1": 0.07391035556793213,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.5577429533004761,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.5335720181465149,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.5491230487823486,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa011",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.5130181312561035,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa012",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.5560709238052368,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa013",
+          "overlap": 0.05555555555555555
+        }
+      ]
+    },
+    {
+      "id": "t031",
+      "type": "match",
+      "question": "Какие ежегодные работы предусмотрены для автолифта?",
+      "expected_id": "qa031",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.2704017758369446,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.39617645740509033,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.36363636363636365
+        },
+        {
+          "qa_id": "qa002",
+          "d": 0.4123039245605469,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "to1_periodicity",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.4203662872314453,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.38588833808898926,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.21428571428571427
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.2704017758369446,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "t032",
+      "type": "match",
+      "question": "Как часто снимать пальцы крепления цилиндров пантографа?",
+      "expected_id": "qa032",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa032",
+      "reason": "within_hybrid",
+      "d1": 0.21878236532211304,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.6793922185897827,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa015",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.6579145193099976,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.6814475059509277,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa027",
+          "d": 0.4074145555496216,
+          "slots_ok": true,
+          "group": "qa027",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa028",
+          "d": 0.6357947587966919,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa028",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t033",
+      "type": "match",
+      "question": "С какой периодичностью проводится ежегодная проверка технического состояния?",
+      "expected_id": "qa033",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa033",
+      "reason": "within_direct",
+      "d1": 0.021124422550201416,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.4019395112991333,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.0625
+        },
+        {
+          "qa_id": "qa004",
+          "d": 0.415205180644989,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "qa004",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.45878833532333374,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.0625
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.47967028617858887,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.0625
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.4219443202018738,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa011",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t034",
+      "type": "match",
+      "question": "Как взять пробу и проверить гидромасло?",
+      "expected_id": "qa034",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa034",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.42557406425476074,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.4444444444444444
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.42455148696899414,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.5178080797195435,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.5325616598129272,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t035",
+      "type": "match",
+      "question": "Какие предельные показатели для гидромасла указаны в документе?",
+      "expected_id": "qa035",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa035",
+      "reason": "intent_mismatch",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5308035016059875,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.3662387728691101,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.43414515256881714,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.42689818143844604,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t036",
+      "type": "match",
+      "question": "Выше скольки градусов нельзя нагревать гидравлику?",
+      "expected_id": "qa036",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa036",
+      "reason": "within_direct",
+      "d1": 0.07734668254852295,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.44550061225891113,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.44192177057266235,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.5133395195007324,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa018",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.49574923515319824,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.07734668254852295,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "t037",
+      "type": "match",
+      "question": "Сколько процентов воды допустимо в гидромасле?",
+      "expected_id": "qa037",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa037",
+      "reason": "within_hybrid",
+      "d1": 0.2434341311454773,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5300021767616272,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.5133794546127319,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa017",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.5271425247192383,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.5055685043334961,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.5223594903945923,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t038",
+      "type": "match",
+      "question": "Какой процент загрязнений допустим для рабочей жидкости?",
+      "expected_id": "qa038",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa038",
+      "reason": "intent_mismatch",
+      "d1": 0.241838276386261,
+      "candidates": [
+        {
+          "qa_id": "qa018",
+          "d": 0.4566643238067627,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.43395084142684937,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.3102710247039795,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.42246294021606445,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.36841249465942383,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "id": "t039",
+      "type": "match",
+      "question": "Какой класс чистоты гидромасла нужен по ГОСТ 17216-71?",
+      "expected_id": "qa039",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa039",
+      "reason": "intent_mismatch",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa022",
+          "d": 0.5138131380081177,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.38515931367874146,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.38952869176864624,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.5263100862503052,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.5120507478713989,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t040",
+      "type": "match",
+      "question": "Почему на промокательной бумаге черное пятно от гидрожидкости?",
+      "expected_id": "qa040",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa040",
+      "reason": "intent_mismatch",
+      "d1": 0.1415879726409912,
+      "candidates": [
+        {
+          "qa_id": "qa017",
+          "d": 0.6840540170669556,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa017",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa029",
+          "d": 0.6858004331588745,
+          "slots_ok": true,
+          "group": "qa029",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.6628290414810181,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.6248539686203003,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.6773312091827393,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.08333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t041",
+      "type": "match",
+      "question": "Масло на смотровом стекле ниже метки — можно ли работать?",
+      "expected_id": "qa041",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa041",
+      "reason": "within_hybrid",
+      "d1": 0.13889604806900024,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5070420503616333,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.5846773386001587,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa023",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa029",
+          "d": 0.5931435227394104,
+          "slots_ok": true,
+          "group": "qa029",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa030",
+          "d": 0.584697961807251,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa030",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.5542792081832886,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t042",
+      "type": "match",
+      "question": "Как поменять масло в гидравлике автолифта?",
+      "expected_id": "qa042",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa042",
+      "reason": "within_hybrid",
+      "d1": 0.13907164335250854,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.34180426597595215,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.4957435131072998,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.42095285654067993,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.4428088665008545,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.4607505798339844,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t043",
+      "type": "match",
+      "question": "Можно ли подтягивать соединения гидросистемы под давлением?",
+      "expected_id": "qa043",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa043",
+      "reason": "within_direct",
+      "d1": 0.07171475887298584,
+      "candidates": [
+        {
+          "qa_id": "qa003",
+          "d": 0.4935431480407715,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.40404051542282104,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.4564180374145508,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.46258091926574707,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.43572139739990234,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.08333333333333333
+        }
+      ]
+    },
+    {
+      "id": "t044",
+      "type": "match",
+      "question": "Можно ли пропустить смазочные работы при ТО, если нет времени?",
+      "expected_id": "qa044",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa044",
+      "reason": "within_hybrid",
+      "d1": 0.18379855155944824,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.48973900079727173,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.5190228819847107,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.49422597885131836,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.5160515904426575,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.4102973937988281,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.2
+        }
+      ]
+    },
+    {
+      "id": "t045",
+      "type": "match",
+      "question": "Может ли водитель без зачета по эксплуатации обслуживать автолифт?",
+      "expected_id": "qa045",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa045",
+      "reason": "intent_mismatch",
+      "d1": 0.062591552734375,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.4517950415611267,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa043",
+          "d": 0.443325936794281,
+          "slots_ok": true,
+          "group": "qa043",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa045",
+          "d": 0.062591552734375,
+          "slots_ok": true,
+          "group": "qa045",
+          "overlap": 0.7777777777777778
+        },
+        {
+          "qa_id": "qa047",
+          "d": 0.4439700245857239,
+          "slots_ok": true,
+          "group": "qa047",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa048",
+          "d": 0.4361075162887573,
+          "slots_ok": true,
+          "group": "qa048",
+          "overlap": 0.07142857142857142
+        }
+      ]
+    },
+    {
+      "id": "t046",
+      "type": "match",
+      "question": "В каком журнале отмечают проведенное ТО?",
+      "expected_id": "qa046",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa046",
+      "reason": "intent_mismatch",
+      "d1": 0.08972692489624023,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.47947585582733154,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.5627917051315308,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.4631307125091553,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.5201563835144043,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa028",
+          "d": 0.5354518890380859,
+          "slots_ok": true,
+          "group": "qa028",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "t047",
+      "type": "match",
+      "question": "Зачем вообще нужна профилактика автолифта?",
+      "expected_id": "qa047",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa047",
+      "reason": "within_direct",
+      "d1": 0.018541932106018066,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.4872581362724304,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.5092411637306213,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.5442104339599609,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.5580947995185852,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.4675775170326233,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.1
+        }
+      ]
+    },
+    {
+      "id": "t048",
+      "type": "match",
+      "question": "Где найти порядок обслуживания Mercedes Atego?",
+      "expected_id": "qa048",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa048",
+      "reason": "within_hybrid",
+      "d1": 0.1788386106491089,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.570464015007019,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.6013246178627014,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.5797773599624634,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa045",
+          "d": 0.5790599584579468,
+          "slots_ok": true,
+          "group": "qa045",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa046",
+          "d": 0.5723307728767395,
+          "slots_ok": true,
+          "group": "qa046",
+          "overlap": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "id": "t049",
+      "type": "match",
+      "question": "Можно ли работать на автолифте при ветре 25 м/с?",
+      "expected_id": "qa049",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa049",
+      "reason": "query_number",
+      "d1": 0.16666477918624878,
+      "candidates": [
+        {
+          "qa_id": "qa003",
+          "d": 0.5690921545028687,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "to1_periodicity",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.5704506635665894,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4701172709465027,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.5811018943786621,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5534258484840393,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.07142857142857142
+        }
+      ]
+    },
+    {
+      "id": "t050",
+      "type": "match",
+      "question": "Можно ли выезжать на автолифте на городские дороги?",
+      "expected_id": "qa050",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa050",
+      "reason": "intent_mismatch",
+      "d1": 0.0751422643661499,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.5658735632896423,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.47319555282592773,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.5554239749908447,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.5553667545318604,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa043",
+          "d": 0.4222698211669922,
+          "slots_ok": true,
+          "group": "qa043",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "c01a",
+      "type": "contrast",
+      "pair": "c01",
+      "question": "Как часто делают ТО-1?",
+      "expected_id": "qa002",
+      "accept_ids": [
+        "qa003"
+      ],
+      "must_not": [
+        "qa004"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa002",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.3420780897140503,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.28022098541259766,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.15821999311447144,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.2431882619857788,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.125
+        }
+      ]
+    },
+    {
+      "id": "c01b",
+      "type": "contrast",
+      "pair": "c01",
+      "question": "Как часто делают СО?",
+      "expected_id": "qa004",
+      "must_not": [
+        "qa002"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa004",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.2546350955963135,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.49039262533187866,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa021",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.33300721645355225,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.4346439838409424,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.1
+        }
+      ]
+    },
+    {
+      "id": "c02a",
+      "type": "contrast",
+      "pair": "c02",
+      "question": "Сколько длится ЕО?",
+      "expected_id": "qa005",
+      "must_not": [
+        "qa006"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa005",
+      "reason": "within_direct",
+      "d1": 0.05590355396270752,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.58585524559021,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa004",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.05590355396270752,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.4
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.5150943994522095,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.5339323282241821,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.4555704593658447,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "id": "c02b",
+      "type": "contrast",
+      "pair": "c02",
+      "question": "Сколько длится ЕО зимой?",
+      "expected_id": "qa006",
+      "must_not": [
+        "qa005"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.35283565521240234,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.5401973128318787,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa004",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.26467299461364746,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa005",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.35283565521240234,
+          "slots_ok": true,
+          "group": "qa006",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5315676927566528,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.4226723909378052,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa009",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "c03a",
+      "type": "contrast",
+      "pair": "c03",
+      "question": "Трудоемкость ТО-1 в часах?",
+      "expected_id": "qa007",
+      "must_not": [
+        "qa008"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa007",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.4134264588356018,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.4018867611885071,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4307364225387573,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.375
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.39250779151916504,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.25
+        }
+      ]
+    },
+    {
+      "id": "c03b",
+      "type": "contrast",
+      "pair": "c03",
+      "question": "Трудоемкость СО в часах?",
+      "expected_id": "qa008",
+      "must_not": [
+        "qa007"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa008",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.46139007806777954,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.40505313873291016,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa006",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.5283769965171814,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.5391175746917725,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa023",
+          "overlap": 0.125
+        }
+      ]
+    },
+    {
+      "id": "c04a",
+      "type": "contrast",
+      "pair": "c04",
+      "question": "Сколько воды допускается в гидрожидкости в процентах?",
+      "expected_id": "qa037",
+      "must_not": [
+        "qa038"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa037",
+      "reason": "within_hybrid",
+      "d1": 0.23194384574890137,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5526072978973389,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.48801618814468384,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.5591568350791931,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa017",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.4769212603569031,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.5786881446838379,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "c04b",
+      "type": "contrast",
+      "pair": "c04",
+      "question": "Сколько загрязнений допускается в гидрожидкости в процентах?",
+      "expected_id": "qa038",
+      "must_not": [
+        "qa037"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa038",
+      "reason": "within_hybrid",
+      "d1": 0.22682809829711914,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5322961211204529,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.4551156759262085,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.48281461000442505,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.2923514246940613,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.22682809829711914,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.4444444444444444
+        }
+      ]
+    },
+    {
+      "id": "c05a",
+      "type": "contrast",
+      "pair": "c05",
+      "question": "Что делать с автолифтом перед выездом?",
+      "expected_id": "qa010",
+      "must_not": [
+        "qa014"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.44019198417663574,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.47902899980545044,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.40986084938049316,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa010",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.22626519203186035,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa014",
+          "overlap": 0.4
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.510691225528717,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.4985412359237671,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.09090909090909091
+        }
+      ]
+    },
+    {
+      "id": "c05b",
+      "type": "contrast",
+      "pair": "c05",
+      "question": "Что делать с автолифтом после окончания работы?",
+      "expected_id": "qa014",
+      "must_not": [
+        "qa010"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.43361735343933105,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.4925411343574524,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.1571061611175537,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa014",
+          "overlap": 0.6666666666666666
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.4941423535346985,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa043",
+          "d": 0.5135508179664612,
+          "slots_ok": true,
+          "group": "qa043",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa045",
+          "d": 0.43361735343933105,
+          "slots_ok": true,
+          "group": "qa045",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c06a",
+      "type": "contrast",
+      "pair": "c06",
+      "question": "Какие работы выполняют при ТО-1?",
+      "expected_id": "qa021",
+      "must_not": [
+        "qa025"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa021",
+      "reason": "within_direct",
+      "d1": 0.10620266199111938,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.28286266326904297,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.3485151529312134,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.2549739480018616,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.10620266199111938,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.2857142857142857
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.2921254634857178,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.25
+        }
+      ]
+    },
+    {
+      "id": "c06b",
+      "type": "contrast",
+      "pair": "c06",
+      "question": "Какие работы выполняют при СО?",
+      "expected_id": "qa025",
+      "must_not": [
+        "qa021"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa025",
+      "reason": "within_hybrid",
+      "d1": 0.22128385305404663,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.22616428136825562,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.2688051462173462,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa009",
+          "d": 0.4711343050003052,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa009",
+          "overlap": 0.5714285714285714
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.4592689871788025,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa021",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.22128385305404663,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.23076923076923078
+        }
+      ]
+    },
+    {
+      "id": "c07a",
+      "type": "contrast",
+      "pair": "c07",
+      "question": "Что нужно делать раз в год?",
+      "expected_id": "qa031",
+      "must_not": [
+        "qa032"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.2992960214614868,
+      "candidates": [
+        {
+          "qa_id": "qa004",
+          "d": 0.5063295364379883,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "qa004",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.5700944066047668,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.5688943862915039,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5859900712966919,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa015",
+          "d": 0.5934830904006958,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "qa015",
+          "overlap": 0.18181818181818182
+        }
+      ]
+    },
+    {
+      "id": "c07b",
+      "type": "contrast",
+      "pair": "c07",
+      "question": "Что нужно делать раз в три года?",
+      "expected_id": "qa032",
+      "must_not": [
+        "qa031"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa032",
+      "reason": "within_hybrid",
+      "d1": 0.23403513431549072,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.5617401599884033,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "to1_periodicity",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa004",
+          "d": 0.5241833925247192,
+          "slots_ok": false,
+          "fail": "period",
+          "group": "qa004",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.5708340406417847,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.5832294225692749,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5706413984298706,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c08a",
+      "type": "contrast",
+      "pair": "c08",
+      "question": "Как часто санобработка фургона?",
+      "expected_id": "qa015",
+      "must_not": [
+        "qa019"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa015",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.3736974596977234,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.42311328649520874,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.42846739292144775,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.3912392854690552,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "c08b",
+      "type": "contrast",
+      "pair": "c08",
+      "question": "В каком порядке санобработка фургона?",
+      "expected_id": "qa019",
+      "must_not": [
+        "qa015"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa019",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.1361311674118042,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.34870415925979614,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.3550416827201843,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.36363636363636365
+        }
+      ]
+    },
+    {
+      "id": "c09a",
+      "type": "contrast",
+      "pair": "c09",
+      "question": "Сколько моющего средства на 10 л воды?",
+      "expected_id": "qa017",
+      "must_not": [
+        "qa018"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.3810746669769287,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.6178280711174011,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa012",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.3810746669769287,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.5555555555555556
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.578214168548584,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa020",
+          "d": 0.6060613393783569,
+          "slots_ok": true,
+          "group": "qa020",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.616478681564331,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa022",
+          "overlap": 0.07142857142857142
+        }
+      ]
+    },
+    {
+      "id": "c09b",
+      "type": "contrast",
+      "pair": "c09",
+      "question": "Какой температуры воду брать для мойки фургона?",
+      "expected_id": "qa018",
+      "must_not": [
+        "qa017"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa018",
+      "reason": "intent_mismatch",
+      "d1": 0.12184834480285645,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.4718577265739441,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.37343984842300415,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.32996469736099243,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.12184834480285645,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.4522073268890381,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "id": "c10a",
+      "type": "contrast",
+      "pair": "c10",
+      "question": "Сколько времени осмотр роликов стрелы пантографа?",
+      "expected_id": "qa027",
+      "must_not": [
+        "qa028"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa027",
+      "reason": "within_hybrid",
+      "d1": 0.16341853141784668,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5955533981323242,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.6794630289077759,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa015",
+          "d": 0.6968214511871338,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa015",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.6415055990219116,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa027",
+          "d": 0.16341853141784668,
+          "slots_ok": true,
+          "group": "qa027",
+          "overlap": 0.7142857142857143
+        }
+      ]
+    },
+    {
+      "id": "c10b",
+      "type": "contrast",
+      "pair": "c10",
+      "question": "Сколько времени осмотр роликов выдвижной площадки?",
+      "expected_id": "qa028",
+      "must_not": [
+        "qa027"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa028",
+      "reason": "within_hybrid",
+      "d1": 0.13308894634246826,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5027917623519897,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.5752876996994019,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa023",
+          "overlap": 0.16666666666666666
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.6346595883369446,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa027",
+          "d": 0.3574095368385315,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa027",
+          "overlap": 0.5
+        },
+        {
+          "qa_id": "qa028",
+          "d": 0.13308894634246826,
+          "slots_ok": true,
+          "group": "qa028",
+          "overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "c11a",
+      "type": "contrast",
+      "pair": "c11",
+      "question": "Какая максимальная температура гидрожидкости?",
+      "expected_id": "qa036",
+      "must_not": [
+        "qa049"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa036",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa013",
+          "d": 0.35069841146469116,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.4365089535713196,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.5
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.29185426235198975,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.37885797023773193,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.2857142857142857
+        }
+      ]
+    },
+    {
+      "id": "c11b",
+      "type": "contrast",
+      "pair": "c11",
+      "question": "Какая максимальная температура воздуха для работы автолифта?",
+      "expected_id": "qa049",
+      "must_not": [
+        "qa036"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa049",
+      "reason": "within_hybrid",
+      "d1": 0.22940289974212646,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.5139789581298828,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.49797213077545166,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4693381190299988,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.42125368118286133,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.058823529411764705
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.4918345808982849,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.125
+        }
+      ]
+    },
+    {
+      "id": "c12a",
+      "type": "contrast",
+      "pair": "c12",
+      "question": "Сколько часов промывка фильтроэлемента при ТО-1?",
+      "expected_id": "qa022",
+      "must_not": [
+        "qa024"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa022",
+      "reason": "within_hybrid",
+      "d1": 0.18072104454040527,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.46371352672576904,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.42340999841690063,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.423340380191803,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.40884095430374146,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.18072104454040527,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.23076923076923078
+        }
+      ]
+    },
+    {
+      "id": "c12b",
+      "type": "contrast",
+      "pair": "c12",
+      "question": "Сколько часов обслуживание аккумуляторов при ТО-1?",
+      "expected_id": "qa024",
+      "must_not": [
+        "qa022"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa024",
+      "reason": "within_hybrid",
+      "d1": 0.17831945419311523,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.35238581895828247,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.14285714285714285
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.35492920875549316,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "to1_periodicity",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.33076322078704834,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.3697746992111206,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.39519745111465454,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa022",
+          "overlap": 0.23076923076923078
+        }
+      ]
+    },
+    {
+      "id": "c13a",
+      "type": "contrast",
+      "pair": "c13",
+      "question": "Сколько часов должна отработать гидравлика до ТО-1?",
+      "expected_id": "qa003",
+      "accept_ids": [
+        "qa002"
+      ],
+      "must_not": [
+        "qa007"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa003",
+      "reason": "intent_mismatch",
+      "d1": 0.21448135375976562,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.43716710805892944,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.21448135375976562,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.41275858879089355,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.2222222222222222
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.418490469455719,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa013",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.41634267568588257,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.1
+        }
+      ]
+    },
+    {
+      "id": "c13b",
+      "type": "contrast",
+      "pair": "c13",
+      "question": "Сколько часов уходит на выполнение ТО-1?",
+      "expected_id": "qa007",
+      "must_not": [
+        "qa002",
+        "qa003"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa007",
+      "reason": "within_hybrid",
+      "d1": 0.21295279264450073,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.30706024169921875,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.3484705686569214,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.21295279264450073,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa021",
+          "d": 0.2686119079589844,
+          "slots_ok": true,
+          "group": "qa021",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.2755841612815857,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.2
+        }
+      ]
+    },
+    {
+      "id": "n01",
+      "type": "no_match",
+      "question": "Какую марку гидравлического масла заливать в бак и сколько литров нужно для полной замены?",
+      "near": [
+        "qa042",
+        "qa035"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.29052048921585083,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.42587602138519287,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.05
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.5791856050491333,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.4304012656211853,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.11764705882352941
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.45700234174728394,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa036",
+          "d": 0.48345422744750977,
+          "slots_ok": true,
+          "group": "qa036",
+          "overlap": 0.17647058823529413
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "type": "no_match",
+      "question": "Какое рабочее давление в гидросистеме автолифта в МПа?",
+      "near": [
+        "qa043"
+      ],
+      "guard": "unit_out_of_corpus",
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "unit_out_of_corpus",
+      "d1": null,
+      "candidates": []
+    },
+    {
+      "id": "n03",
+      "type": "no_match",
+      "question": "Какой момент затяжки резьбовых соединений рамы?",
+      "near": [
+        "qa026"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.36449915170669556,
+      "candidates": [
+        {
+          "qa_id": "qa013",
+          "d": 0.6316227316856384,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.7174041271209717,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.7425957918167114,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa023",
+          "d": 0.7189123630523682,
+          "slots_ok": true,
+          "group": "qa023",
+          "overlap": 0.06666666666666667
+        },
+        {
+          "qa_id": "qa026",
+          "d": 0.36449915170669556,
+          "slots_ok": true,
+          "group": "qa026",
+          "overlap": 0.2727272727272727
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "type": "no_match",
+      "question": "Когда проводится ТО-2 автолифта?",
+      "near": [
+        "qa002",
+        "qa004"
+      ],
+      "guard": "level_out_of_corpus",
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "level_out_of_corpus",
+      "d1": null,
+      "candidates": []
+    },
+    {
+      "id": "n05",
+      "type": "no_match",
+      "question": "Какой объем бака гидросистемы?",
+      "near": [
+        "qa041"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.3756300210952759,
+      "candidates": [
+        {
+          "qa_id": "qa003",
+          "d": 0.4698649048805237,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.5199427604675293,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.4425220489501953,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.07142857142857142
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.47731471061706543,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.477824330329895,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.125
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "type": "no_match",
+      "question": "Какая грузоподъемность автолифта АЛ 3У-М6?",
+      "near": [
+        "qa050"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.2588738203048706,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.2735174894332886,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.3
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.34004437923431396,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.3524484634399414,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.320637583732605,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.2727272727272727
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.32246196269989014,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.2727272727272727
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "type": "no_match",
+      "question": "На какую высоту поднимается кузов автолифта?",
+      "near": [
+        "qa011"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.4521094560623169,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.5056560635566711,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.6019970178604126,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa025",
+          "d": 0.5376434326171875,
+          "slots_ok": true,
+          "group": "qa025",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.5607197284698486,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa033",
+          "d": 0.5990196466445923,
+          "slots_ok": true,
+          "group": "qa033",
+          "overlap": 0.058823529411764705
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "type": "no_match",
+      "question": "Какое давление должно быть в шинах автолифта?",
+      "near": [
+        "qa010"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.49353694915771484,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.580596923828125,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa010",
+          "d": 0.5988973379135132,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.5999882221221924,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.5945135354995728,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa031",
+          "d": 0.6050328016281128,
+          "slots_ok": true,
+          "group": "qa031",
+          "overlap": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "type": "no_match",
+      "question": "Как часто менять масло в двигателе шасси?",
+      "near": [
+        "qa048",
+        "qa010"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.46882927417755127,
+      "candidates": [
+        {
+          "qa_id": "qa002",
+          "d": 0.4968615174293518,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa004",
+          "d": 0.46882927417755127,
+          "slots_ok": true,
+          "group": "qa004",
+          "overlap": 0.13333333333333333
+        },
+        {
+          "qa_id": "qa011",
+          "d": 0.5281935930252075,
+          "slots_ok": true,
+          "group": "qa011",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa012",
+          "d": 0.5593088269233704,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa012",
+          "overlap": 0.18181818181818182
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.5493916273117065,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "type": "no_match",
+      "question": "Как устранить течь гидроцилиндра?",
+      "near": [
+        "qa032"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.5200079679489136,
+      "candidates": [
+        {
+          "qa_id": "qa012",
+          "d": 0.5387105941772461,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa012",
+          "overlap": 0.1111111111111111
+        },
+        {
+          "qa_id": "qa020",
+          "d": 0.6380332708358765,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa020",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.5521212816238403,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa032",
+          "d": 0.4366075396537781,
+          "slots_ok": false,
+          "fail": "node",
+          "group": "qa032",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.6298586130142212,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "type": "no_match",
+      "question": "Каким средством обрабатывать кабину водителя?",
+      "near": [
+        "qa016"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.5310364961624146,
+      "candidates": [
+        {
+          "qa_id": "qa010",
+          "d": 0.5714958906173706,
+          "slots_ok": true,
+          "group": "qa010",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa014",
+          "d": 0.5455843210220337,
+          "slots_ok": true,
+          "group": "qa014",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.5492098927497864,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa029",
+          "d": 0.5874848365783691,
+          "slots_ok": true,
+          "group": "qa029",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa043",
+          "d": 0.5658172369003296,
+          "slots_ok": true,
+          "group": "qa043",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "type": "no_match",
+      "question": "Какой каталожный номер у фильтроэлемента гидросистемы?",
+      "near": [
+        "qa022"
+      ],
+      "status": "pass",
+      "pass": true,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.3666509985923767,
+      "candidates": [
+        {
+          "qa_id": "qa003",
+          "d": 0.5199868679046631,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.3666509985923767,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.125
+        },
+        {
+          "qa_id": "qa034",
+          "d": 0.4958590269088745,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.5267528891563416,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.09090909090909091
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.47130775451660156,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.08333333333333333
+        }
+      ]
+    },
+    {
+      "id": "dg1",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как часто проводится ТО-1?"
+        },
+        {
+          "role": "assistant",
+          "content": "ТО-1 проводится через 2 месяца работы или через 250 ч работы гидросистемы (пп. 4.3.1, 4.3.3)."
+        }
+      ],
+      "question": "А трудоемкость у него какая?",
+      "expected_id": "qa007",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.49207812547683716,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5876803994178772,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.4746917486190796,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.1
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.6292749047279358,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.6321503520011902,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa022",
+          "d": 0.49207812547683716,
+          "slots_ok": true,
+          "group": "qa022",
+          "overlap": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "dg2",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Каким нормам должна соответствовать гидрожидкость?"
+        },
+        {
+          "role": "assistant",
+          "content": "Рабочая температура — не выше 80 °C, содержание воды — не более 0,5 %, масса загрязнений — не более 0,0032 %."
+        }
+      ],
+      "question": "А как её проверить на загрязнение?",
+      "expected_id": "qa040",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa040",
+      "reason": "within_hybrid",
+      "d1": 0.14806818962097168,
+      "candidates": [
+        {
+          "qa_id": "qa034",
+          "d": 0.33498358726501465,
+          "slots_ok": true,
+          "group": "qa034",
+          "overlap": 0.2
+        },
+        {
+          "qa_id": "qa035",
+          "d": 0.4610176682472229,
+          "slots_ok": true,
+          "group": "qa035",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa037",
+          "d": 0.48933666944503784,
+          "slots_ok": true,
+          "group": "qa037",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa038",
+          "d": 0.38284116983413696,
+          "slots_ok": true,
+          "group": "qa038",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa039",
+          "d": 0.43444859981536865,
+          "slots_ok": true,
+          "group": "qa039",
+          "overlap": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "id": "dg3",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как часто проводится санитарная обработка фургона?"
+        },
+        {
+          "role": "assistant",
+          "content": "Рекомендуется два-три раза в неделю, при сильном загрязнении — ежедневно (п. 4.3.2)."
+        }
+      ],
+      "question": "А в каком порядке её делать?",
+      "expected_id": "qa019",
+      "status": "pass",
+      "pass": true,
+      "decision": "hybrid",
+      "got_id": "qa019",
+      "reason": "within_hybrid",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa015",
+          "d": 0.24944669008255005,
+          "slots_ok": true,
+          "group": "qa015",
+          "overlap": 0.3333333333333333
+        },
+        {
+          "qa_id": "qa016",
+          "d": 0.42823225259780884,
+          "slots_ok": true,
+          "group": "qa016",
+          "overlap": 0.08333333333333333
+        },
+        {
+          "qa_id": "qa017",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa017",
+          "overlap": 0.07692307692307693
+        },
+        {
+          "qa_id": "qa018",
+          "d": 0.2888719439506531,
+          "slots_ok": true,
+          "group": "qa018",
+          "overlap": 0.15384615384615385
+        },
+        {
+          "qa_id": "qa019",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa019",
+          "overlap": 0.5454545454545454
+        }
+      ]
+    },
+    {
+      "id": "dg4",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Какие виды ТО предусмотрены?"
+        },
+        {
+          "role": "assistant",
+          "content": "ЕО, ТО-1 и СО (п. 4.3.1)."
+        }
+      ],
+      "question": "А какая у него трудоемкость?",
+      "expected_id": "none",
+      "expected_clarification": true,
+      "status": "fail",
+      "pass": false,
+      "decision": "hybrid",
+      "got_id": "qa007",
+      "reason": "within_hybrid",
+      "d1": 0.14240843057632446,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.24776893854141235,
+          "slots_ok": true,
+          "group": "qa001",
+          "overlap": 0.4
+        },
+        {
+          "qa_id": "qa003",
+          "d": 0.34977447986602783,
+          "slots_ok": true,
+          "group": "to1_periodicity",
+          "overlap": 0.23076923076923078
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.16961973905563354,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.5
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.16025519371032715,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.625
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.14240843057632446,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "dg5",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Как прогреть рабочую жидкость гидросистемы при отрицательной температуре?"
+        },
+        {
+          "role": "assistant",
+          "content": "После включения коробки отбора мощности дать насосу проработать вхолостую, без нагрузки (п. 4.3.2)."
+        }
+      ],
+      "question": "Не меньше скольки минут?",
+      "expected_id": "qa013",
+      "status": "fail",
+      "pass": false,
+      "decision": "none",
+      "got_id": null,
+      "reason": "above_hybrid",
+      "d1": 0.5862914323806763,
+      "candidates": [
+        {
+          "qa_id": "qa005",
+          "d": 0.5957384705543518,
+          "slots_ok": true,
+          "group": "qa005",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.6776818037033081,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa006",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.647844672203064,
+          "slots_ok": true,
+          "group": "qa007",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.5862914323806763,
+          "slots_ok": true,
+          "group": "qa008",
+          "overlap": 0.0
+        },
+        {
+          "qa_id": "qa013",
+          "d": 0.6717456579208374,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa013",
+          "overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "dg6",
+      "type": "dialog",
+      "stage": "B",
+      "history": [
+        {
+          "role": "user",
+          "content": "Какова трудоемкость ЕО?"
+        },
+        {
+          "role": "assistant",
+          "content": "Трудоемкость ЕО — 25 мин (п. 4.3.2)."
+        }
+      ],
+      "question": "А зимой?",
+      "expected_id": "qa006",
+      "status": "pass",
+      "pass": true,
+      "decision": "direct",
+      "got_id": "qa006",
+      "reason": "within_direct",
+      "d1": 0.0,
+      "candidates": [
+        {
+          "qa_id": "qa001",
+          "d": 0.3856077194213867,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa001",
+          "overlap": 0.25
+        },
+        {
+          "qa_id": "qa005",
+          "d": 0.23274964094161987,
+          "slots_ok": false,
+          "fail": "condition",
+          "group": "qa005",
+          "overlap": 0.6
+        },
+        {
+          "qa_id": "qa006",
+          "d": 0.0,
+          "slots_ok": true,
+          "group": "qa006",
+          "overlap": 1.0
+        },
+        {
+          "qa_id": "qa007",
+          "d": 0.2737905979156494,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa007",
+          "overlap": 0.45454545454545453
+        },
+        {
+          "qa_id": "qa008",
+          "d": 0.21671688556671143,
+          "slots_ok": false,
+          "fail": "level",
+          "group": "qa008",
+          "overlap": 0.45454545454545453
+        }
+      ]
+    }
+  ]
+}
